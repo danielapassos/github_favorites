@@ -90,8 +90,9 @@ export class FavoritesView extends Favorites {
         entries.forEach( user => {
             const row = this.createRow()
             row.querySelector('.user img').src = `https://github.com/${user.login}.png`
+            row.querySelector('.user a').href = `https://github.com/${user.login}`
             row.querySelector('.user p').textContent = user.name
-            ow.querySelector('.user span').textContent = user.login
+            row.querySelector('.user span').textContent = user.login
             row.querySelector('.user repositories').textContent = user.public_repos
             row.querySelector('.user followers').textContent = user.followers
 
